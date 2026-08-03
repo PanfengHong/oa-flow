@@ -1,0 +1,179 @@
+.oa-flow-panel {
+  background: #fff;
+  border: 1px solid #eef0f3;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.oa-flow-panel__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.oa-flow-panel__head h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #1f1f1f;
+}
+
+.oa-flow-panel__head span {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.oa-flow-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.oa-flow-table th,
+.oa-flow-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.oa-flow-table th {
+  color: #8c8c8c;
+  font-weight: 500;
+}
+
+.oa-flow-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.oa-flow-badge--pending {
+  background: #fff7e6;
+  color: #d48806;
+}
+
+.oa-flow-badge--approved {
+  background: #f6ffed;
+  color: #389e0d;
+}
+
+.oa-flow-badge--rejected {
+  background: #fff2f0;
+  color: #cf1322;
+}
+
+.oa-flow-badge--draft {
+  background: #f5f5f5;
+  color: #595959;
+}
+
+.oa-flow-link {
+  color: #1677ff;
+  text-decoration: none;
+}
+
+.oa-flow-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.oa-flow-detail__header h2 {
+  margin: 0 0 8px;
+}
+
+.oa-flow-detail__header p {
+  margin: 0;
+  color: #8c8c8c;
+  font-size: 14px;
+}
+
+.oa-flow-detail__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.oa-flow-detail__form {
+  min-width: 0;
+}
+
+.oa-flow-detail aside {
+  background: #fff;
+  border: 1px solid #eef0f3;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.oa-flow-detail aside h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+.oa-flow-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.oa-flow-timeline__item {
+  display: flex;
+  gap: 12px;
+}
+
+.oa-flow-timeline__dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.oa-flow-timeline__item--approved .oa-flow-timeline__dot {
+  background: #f6ffed;
+  color: #389e0d;
+}
+
+.oa-flow-timeline__item--pending .oa-flow-timeline__dot {
+  background: #e6f4ff;
+  color: #1677ff;
+}
+
+.oa-flow-timeline__item--rejected .oa-flow-timeline__dot {
+  background: #fff2f0;
+  color: #cf1322;
+}
+
+.oa-flow-timeline__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.oa-flow-timeline__content strong {
+  color: #1f1f1f;
+}
+
+.oa-flow-timeline__content span {
+  color: #8c8c8c;
+}
+
+.oa-flow-timeline__content em {
+  font-style: normal;
+  color: #595959;
+}
+
+.oa-flow-timeline__content p {
+  margin: 4px 0 0;
+  color: #cf1322;
+}
