@@ -41,6 +41,15 @@
   font-weight: 500;
 }
 
+.oa-flow-table__row--clickable {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.oa-flow-table__row--clickable:hover {
+  background: #f0f5ff;
+}
+
 .oa-flow-badge {
   display: inline-block;
   padding: 2px 8px;

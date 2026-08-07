@@ -12,9 +12,12 @@ const statusLabel: Record<FlowStatus, string> = {
 export interface ApprovalListProps {
   items: ApprovalItem[]
   basePath?: string
+  /** 点击行查看详情的回调。传入后整行可点击（用于抽屉查看），不传则保留跳转详情页的链接行为 */
+  onSelect?: (item: ApprovalItem) => void
 }
 
-export function ApprovalList({ items, basePath = '/approval' }: ApprovalListProps) {
+export function ApprovalList({ items, basePath = '/approval', onSelect }: ApprovalListProps) {
+  const clickable = Boolean(onSelect)
   return (
     <div className="oa-flow-panel">
       <div className="oa-flow-panel__head">
@@ -34,7 +37,11 @@ export function ApprovalList({ items, basePath = '/approval' }: ApprovalListProp
         </thead>
         <tbody>
           {items.map((item) => (
-            <tr key={item.id}>
+            <tr
+              key={item.id}
+              className={clickable ? 'oa-flow-table__row--clickable' : undefined}
+              onClick={clickable ? () => onSelect?.(item) : undefined}
+            >
               <td>{item.title}</td>
               <td>{item.applicant}</td>
               <td>{item.department}</td>
@@ -45,9 +52,13 @@ export function ApprovalList({ items, basePath = '/approval' }: ApprovalListProp
               </td>
               <td>{item.submittedAt}</td>
               <td>
-                <Link to={`${basePath}/${item.id}`} className="oa-flow-link">
-                  查看
-                </Link>
+                {clickable ? (
+                  <span className="oa-flow-link">查看</span>
+                ) : (
+                  <Link to={`${basePath}/${item.id}`} className="oa-flow-link">
+                    查看
+                  </Link>
+                )}
               </td>
             </tr>
           ))}
