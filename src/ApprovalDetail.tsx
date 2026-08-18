@@ -12,6 +12,8 @@ export interface ApprovalDetailProps {
 export function ApprovalDetail({ item, formSlot }: ApprovalDetailProps) {
   const steps = mockStepsFor(item.id)
 
+  console.log("item", item)
+
   return (
     <div className="oa-flow-detail">
       <header className="oa-flow-detail__header">

@@ -8,26 +8,8 @@ export const mockApprovals: ApprovalItem[] = [
     department: '研发中心',
     status: 'pending',
     submittedAt: '2026-08-01 09:30',
-    formSchemaId: 'leave-request',
-  },
-  {
-    id: 'ap-002',
-    title: '李四 · 出差申请',
-    applicant: '李四',
-    department: '市场部',
-    status: 'approved',
-    submittedAt: '2026-07-28 14:10',
-    formSchemaId: 'travel-request',
-  },
-  {
-    id: 'ap-003',
-    title: '王五 · 采购审批',
-    applicant: '王五',
-    department: '运营部',
-    status: 'rejected',
-    submittedAt: '2026-07-25 11:00',
-    formSchemaId: 'purchase-request',
-  },
+    formSchemaId: '1',
+  }
 ]
 
 export function mockStepsFor(id: string) {

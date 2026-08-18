@@ -18,6 +18,7 @@ export interface ApprovalListProps {
 
 export function ApprovalList({ items, basePath = '/approval', onSelect }: ApprovalListProps) {
   const clickable = Boolean(onSelect)
+  console.log("clickable", clickable)
   return (
     <div className="oa-flow-panel">
       <div className="oa-flow-panel__head">
